@@ -1,0 +1,38 @@
+@import "mixins";
+@import "reset";
+
+// PARTIALS
+
+@import "vars";
+
+@import "font";
+@import "z-index";
+@import "layout";
+
+// COMPONENTS
+
+@import "components/keyframes";
+@import "components/buttons";
+@import "components/levelNav";
+
+// SECTIONS
+.if-mobile {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  background: $tuna;
+
+  @include min(1080px) {
+    visibility: hidden;
+    z-index: -100;
+  } 
+}
